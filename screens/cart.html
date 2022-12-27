@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="../js/cart.js" defer></script>
+  </head>
+  <body>
+    <nav class="bar">
+      <div class="bar-right">
+        <span onclick="location.href='../index.html'">نمایندگی آیفون در مشهد</span>
+      </div>
+      <div class="bar-left">
+        <a href="./cart.html" class="nav-link nav-icon iconClass">
+          <i class="fa fa-cart-shopping"></i>
+          <span class="badge" id="cart-qty">0</span>
+        </a>
+      </div>
+    </nav>
+    <div class="cart-container">
+      <div class="empty-container hidden">
+            <img src="../assets/images/empty.png" alt="">
+            <h2>سبد خرید خالی است</h2>
+        </div>
+      <div class="cart-list show" id="list-cart">
+        
+      </div>
+      <div class="purchase-container hidden">
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+          "
+        >
+          <span>جمع سبد خرید</span>
+          <span id="total-price">72,000,000 تومان</span>
+        </div>
+        <button>خرید نهایی</button>
+      </div>
+    </div>
+    <footer class="footer">
+      <span>کلیه حقوق برای سجاد مهری محفوظ است.</span>
+    </footer>
+  </body>
+</html>
