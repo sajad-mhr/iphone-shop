@@ -4,9 +4,9 @@ const mobileData = [
     name: "گوشی موبایل اپل مدل iPhone 13 Pro Max A2644 دو سیم‌ کارت ظرفیت 1 ترابایت و رم 6 گیگابایت",
     price: 69400000,
     images: [
-      "../assets/images/p_1.jpg",
-      "../assets/images/p_1_2.jpg",
-      "../assets/images/p_1_3.jpg",
+      "assets/images/p_1.jpg",
+      "assets/images/p_1_2.jpg",
+      "assets/images/p_1_3.jpg",
     ],
   },
   {
@@ -14,9 +14,9 @@ const mobileData = [
     name: "گوشی موبایل اپل مدل iPhone 12 A2402 MGHN3J/A تک سیم‌ کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت",
     price: 30000000,
     images: [
-      "../assets/images/p_2_1.jpg",
-      "../assets/images/p_2_2.jpg",
-      "../assets/images/p_2_3.jpg",
+      "assets/images/p_2_1.jpg",
+      "assets/images/p_2_2.jpg",
+      "assets/images/p_2_3.jpg",
     ],
   },
 ];
@@ -33,21 +33,20 @@ function getFromLocalStorage() {
   } else {
     cart = [];
   }
-  quantityCount(cart)
+  quantityCount(cart);
 }
 
-
-function quantityCount(cart){
-    let all = 0
-    for(let i = 0;i< cart.length;i++){
-      all += cart[i].productQty
-    }
-    cartQty.innerHTML = all
-    if (all === 0) {
-      cartQty.style.display = "none"
-    }else{
-      cartQty.style.display = "flex"
-    }
+function quantityCount(cart) {
+  let all = 0;
+  for (let i = 0; i < cart.length; i++) {
+    all += cart[i].productQty;
+  }
+  cartQty.innerHTML = all;
+  if (all === 0) {
+    cartQty.style.display = "none";
+  } else {
+    cartQty.style.display = "flex";
+  }
 }
 
 function renderData(data, container) {
@@ -75,5 +74,5 @@ window.addEventListener("scroll", function () {
   }
   console.log("sajad");
 });
-window.addEventListener("load",getFromLocalStorage)
+window.addEventListener("load", getFromLocalStorage);
 renderData(mobileData, productList);

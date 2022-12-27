@@ -34,7 +34,6 @@ function getFromLocalStorage() {
 }
 
 function createCartItems(cart) {
-
   cartList.innerHTML = "";
   cart.forEach(function (item) {
     let cartElem = `
@@ -54,7 +53,9 @@ function createCartItems(cart) {
       </div>
       <div style="display: flex; flex-direction: column; line-height: 40px">
       <span id="prod-name">${item.productName}</span>
-      <span id="prod-price">${item.productPrice.toLocaleString("en-US")} تومان</span>
+      <span id="prod-price">${item.productPrice.toLocaleString(
+        "en-US"
+      )} تومان</span>
       
       </div>
       </div>
@@ -70,10 +71,11 @@ function priceCalculateInCart(cart) {
   }
   totalprice.innerHTML = totalPrice.toLocaleString("en-US") + " تومان ";
   createCartItems(cart);
-  if(totalPrice === 0){
-    $.title = "سبد خرید خالی است"
-  }else{
-    $.title = " مجموع سبد خرید " + totalPrice.toLocaleString("en-US") + " تومان "
+  if (totalPrice === 0) {
+    $.title = "سبد خرید خالی است";
+  } else {
+    $.title =
+      " مجموع سبد خرید " + totalPrice.toLocaleString("en-US") + " تومان ";
   }
 }
 
@@ -143,9 +145,9 @@ function quantityCount(cart) {
   }
   cartQty.innerHTML = all;
   if (all === 0) {
-    cartQty.style.display = "none"
-  }else{
-    cartQty.style.display = "flex"
+    cartQty.style.display = "none";
+  } else {
+    cartQty.style.display = "flex";
   }
 }
 
